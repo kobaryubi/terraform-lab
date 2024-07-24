@@ -1,0 +1,7 @@
+services:
+  terraform:
+    build: .
+    volumes:
+      - .:/app
+    tty: true
+    entrypoint: /bin/sh
