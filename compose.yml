@@ -3,5 +3,12 @@ services:
     build: .
     volumes:
       - .:/app
+      - ~/.aws:/root/.aws
+    tty: true
+    entrypoint: /bin/bash
+  aws:
+    image: amazon/aws-cli
+    volumes:
+      - ~/.aws:/root/.aws
     tty: true
     entrypoint: /bin/bash
