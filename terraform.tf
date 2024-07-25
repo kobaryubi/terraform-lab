@@ -1,11 +1,4 @@
 terraform {
-  cloud {
-    organization = "masahiko-kobayashi"
-    workspaces {
-      name = "terraform-lab-dev"
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"
