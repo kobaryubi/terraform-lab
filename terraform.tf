@@ -4,6 +4,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5"
     }
+
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 5"
+    }
   }
 
   required_version = ">= 1.9.0"

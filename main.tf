@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-northeast-1"
+  region = var.aws_region
 }
 
 resource "aws_instance" "app_server" {
@@ -11,3 +11,10 @@ resource "aws_instance" "app_server" {
   }
 }
 
+provider "google" {
+  project = var.google_project
+}
+
+resource "google_compute_network" "vpc_network" {
+  name = "vpc-network"
+}
