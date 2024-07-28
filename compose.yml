@@ -4,6 +4,7 @@ services:
     volumes:
       - .:/app
       - ~/.aws:/root/.aws
+      - ~/.config/gcloud:/root/.config/gcloud
     tty: true
     entrypoint: /bin/bash
   aws:
