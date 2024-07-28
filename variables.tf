@@ -15,3 +15,9 @@ variable "google_project" {
   type        = string
   default     = "masahiko-kobayashi"
 }
+
+variable "google_location" {
+  description = "Google Cloud location"
+  type        = string
+  default     = "us-central1"
+}

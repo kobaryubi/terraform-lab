@@ -18,3 +18,9 @@ provider "google" {
 resource "google_compute_network" "vpc_network" {
   name = "vpc-network"
 }
+
+resource "google_artifact_registry_repository" "gitlab-repo" {
+  repository_id = "gitlab-repo"
+  format        = "DOCKER"
+  location      = var.google_location
+}
