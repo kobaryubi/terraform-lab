@@ -1,4 +1,5 @@
 ## Start GitLab
+
 ```sh
 docker run -d \
   --platform linux/amd64 \
