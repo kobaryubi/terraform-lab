@@ -3,4 +3,6 @@
 *.tfstate
 *.tfstate.*
 
-docker/gitlab/srv/gitlab/
+docker/gitlab/config/
+docker/gitlab/logs/
+docker/gitlab/data/
