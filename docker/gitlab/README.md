@@ -24,3 +24,13 @@ docker logs -f gitlab
 ```sh
 docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 ```
+
+## Pushing a GitLab Container Image to Google Container Registry
+
+```sh
+gcloud auth login
+gcloud auth configure-docker us-central1-docker.pkg.dev
+docker pull gitlab/gitlab-ce:16.7.9-ce.0
+docker tag gitlab/gitlab-ce:16.7.9-ce.0 us-central1-docker.pkg.dev/masahiko-kobayashi/gitlab-repo/gitlab-ce:16.7.9-ce.0
+docker push us-central1-docker.pkg.dev/masahiko-kobayashi/gitlab-repo/gitlab-ce:16.7.9-ce.0
+```

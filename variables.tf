@@ -9,15 +9,3 @@ variable "instance_name" {
   type        = string
   default     = "TestAppServerInstance"
 }
-
-variable "google_project" {
-  description = "Google Cloud project ID"
-  type        = string
-  default     = "masahiko-kobayashi"
-}
-
-variable "google_location" {
-  description = "Google Cloud location"
-  type        = string
-  default     = "us-central1"
-}

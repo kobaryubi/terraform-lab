@@ -1,3 +1,10 @@
+locals {
+  # Google Cloud project ID
+  google_project = "masahiko-kobayashi"
+  # Google Cloud location
+  google_location = "us-central1"
+}
+
 provider "aws" {
   region = var.aws_region
 }
@@ -12,7 +19,7 @@ resource "aws_instance" "app_server" {
 }
 
 provider "google" {
-  project = var.google_project
+  project = local.google_project
 }
 
 resource "google_compute_network" "vpc_network" {
@@ -22,5 +29,5 @@ resource "google_compute_network" "vpc_network" {
 resource "google_artifact_registry_repository" "gitlab-repo" {
   repository_id = "gitlab-repo"
   format        = "DOCKER"
-  location      = var.google_location
+  location      = local.google_location
 }
