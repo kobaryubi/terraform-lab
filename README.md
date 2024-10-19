@@ -1,8 +1,9 @@
 # terraform-lab
 
-## gcloud
+## Initialize the directory
+
 ```sh
-gcloud auth application-default login
+terraform init
 ```
 
 ## Commands
