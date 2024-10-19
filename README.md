@@ -6,6 +6,12 @@
 terraform init
 ```
 
+## Print output values
+
+```sh
+terraform output
+```
+
 ## Commands
 ```sh
 terraform login
