@@ -4,7 +4,6 @@ services:
     volumes:
       - .:/app
       - ~/.aws:/root/.aws
-      - ~/.config/gcloud:/root/.config/gcloud
     tty: true
     entrypoint: /bin/bash
   aws:
@@ -13,8 +12,3 @@ services:
       - ~/.aws:/root/.aws
     tty: true
     entrypoint: /bin/bash
-  gcloud:
-    image: gcr.io/google.com/cloudsdktool/google-cloud-cli
-    volumes:
-      - ~/.config/gcloud:/root/.config/gcloud
-    tty: true
